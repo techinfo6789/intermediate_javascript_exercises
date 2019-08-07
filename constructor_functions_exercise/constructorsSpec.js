@@ -25,3 +25,20 @@ describe("#multiplyFavoriteNumber", function(){
     expect(person.multiplyFavoriteNumber(10)).to.equal(340)
   });
 });
+
+
+SOLUTION - II
+
+function Person(firstName, lastName, favoriteColor, favoriteNumber){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.favoriteColor = favoriteColor;
+    this.favoriteNumber = favoriteNumber;
+    this.multiplyFavoriteNumber = function(num){
+        return (this.favoriteNumber * num);
+    }
+}
+
+var John = new Person('John','Doe','Green',9)
+
+John.multiplyFavoriteNumber(4);
